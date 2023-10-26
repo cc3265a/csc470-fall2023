@@ -89,9 +89,9 @@ public class PlaneController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ring"))
+        if (other.CompareTag("Ring"))
         {
-
+            Debug.Log("ring get!");
         }
     }
 

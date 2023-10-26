@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KeyItem
   - Terrain
+  - Ring
   layers:
   - Default
   - TransparentFX
