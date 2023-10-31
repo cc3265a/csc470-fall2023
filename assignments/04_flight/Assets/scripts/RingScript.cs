@@ -15,5 +15,15 @@ public class RingScript : MonoBehaviour
     {
         
     }
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("ring!!");
+            Renderer rend = gameObject.GetComponentInChildren<Renderer>();
+            //Destroy(gameObject);
+            Color customColor = new Color(0.4f, 0.9f, 0.7f, 1.0f);
+            rend.material.SetColor("_Color", customColor);
+        }
+    }
 }

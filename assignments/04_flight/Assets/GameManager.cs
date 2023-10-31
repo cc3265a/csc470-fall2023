@@ -8,9 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager SharedInstance;
     public TMP_Text nameText;
-    public TMP_Text DialogueText;
-
-    public GameObject DialoguePanel;
+    public TMP_Text keyText;
 
 
     // Start is called before the first frame update
@@ -27,11 +25,14 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("playerTime");
         }
     }
-    public void LaunchDialogue(VillagerScript chicken)
+    public void LaunchDialogue(string doorText)
     {
-        nameText.text = chicken.name;
-        DialogueText.text = chicken.monologue[0];
-        DialogueText.text = chicken.monologue[0];
+        nameText.text = doorText;
+        
+    }
+    public void KeyGotText(string txt)
+    {
+        keyText.text = txt;
     }
 }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     CharacterController cc;
-    float forwardSpeed = 6;
+    float forwardSpeed = 10;
     float rotateSpeed = 60;
     float jumpForce = 18;
     float gravityModifier = 5f;
@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     Vector3 oldCamPos;
     public GameObject cameraObject;
+
+    bool hasKey = false;
 
     // Start is called before the first frame update
 
@@ -46,8 +48,9 @@ public class PlayerController : MonoBehaviour
 
         Vector3 amountToMove = vAxis * transform.forward * forwardSpeed;
         amountToMove.y = yVelocity;
+        //Debug.Log(amountToMove.magnitude);
         cc.Move(amountToMove * Time.deltaTime);
-        Debug.Log(yVelocity);
+        //Debug.Log(yVelocity);
 
 
         Vector3 newCamPos = transform.position + -transform.forward * 10 + Vector3.up * 5;
@@ -59,9 +62,30 @@ public class PlayerController : MonoBehaviour
         cameraObject.transform.LookAt(transform);
         oldCamPos = newCamPos;
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        GameObject door = GameObject.FindGameObjectWithTag("door");
+        float d = Vector3.Distance(transform.position, door.transform.position);
+        Debug.Log(d);
+        if (d <= 4)
         {
-            CheckChickenTalking();
+            Debug.Log("door near!");
+            if (hasKey != true)
+            {
+                GameManager.SharedInstance.LaunchDialogue("You need a key to open this door");
+            }
+            else
+            {
+                GameManager.SharedInstance.LaunchDialogue("Press E to use key");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Destroy(door);
+                    GameManager.SharedInstance.LaunchDialogue("");
+                    GameManager.SharedInstance.KeyGotText("");
+                }
+            }
+        }
+        else
+        {
+            GameManager.SharedInstance.LaunchDialogue("");
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -69,31 +93,8 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("KeyItem"))
         {
             Debug.Log("key get!");
+            hasKey = true;
+            GameManager.SharedInstance.KeyGotText("Key Got");
         }
-    }
-    void CheckChickenTalking()
-    {
-        GameObject[] chickens = GameObject.FindGameObjectsWithTag("villager");
-        float closest = 999999999999;
-        GameObject closestChicken = null;
-        for (int i = 0; i < chickens.Length; i++)
-        {
-            float distance = Vector3.Distance(transform.position, chickens[i].transform.position);
-            if (distance < closest)
-            {
-                closest = distance;
-                closestChicken = chickens[i];
-            }
-        }
-        if (closestChicken != null)
-        {
-            Vector3 vectorToChicken = (closestChicken.transform.position - transform.position).normalized;
-            float angleToChicken = Vector3.Angle(transform.forward, vectorToChicken);
-            if (angleToChicken < 45)
-            {
-                GameManager.SharedInstance.LaunchDialogue(closestChicken.GetComponent<VillagerScript>());
-            }
-        }
-
     }
 }

@@ -6,7 +6,7 @@ public class PlaneController : MonoBehaviour
 {
     public GameObject basketballPrefab;
 
-    //int score = 0;
+    int fuel = 0;
 
     float forwardSpeed = 85f;
 
@@ -17,6 +17,8 @@ public class PlaneController : MonoBehaviour
     Vector3 oldCamPos;
 
     public GameObject cameraObject;
+
+    public GameObject particles;
 
     // Start is called before the first frame update
     void Start()
@@ -78,7 +80,7 @@ public class PlaneController : MonoBehaviour
         {
             oldCamPos = newCamPos;
         }
-        cameraObject.transform.position = (newCamPos + oldCamPos) / 2f;
+        cameraObject.transform.position = newCamPos;
         cameraObject.transform.LookAt(transform);
         oldCamPos = newCamPos;
 
@@ -92,6 +94,11 @@ public class PlaneController : MonoBehaviour
         if (other.CompareTag("Ring"))
         {
             Debug.Log("ring get!");
+            particles.SetActive(true);
+            Vector3 pos = transform.position;
+            //Instantiate(particles, pos, Quaternion.identity);
+
+
         }
     }
 
