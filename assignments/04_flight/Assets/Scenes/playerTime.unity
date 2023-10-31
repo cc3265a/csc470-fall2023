@@ -474,6 +474,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1720089659}
+    - target: {fileID: 4770724406019862812, guid: 65c90e42d56246b4e94e6f882bc78d3f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d151ac2defb5cf40bbd1f4b4acd4eb6, type: 2}
     - target: {fileID: 5482491571736783910, guid: 65c90e42d56246b4e94e6f882bc78d3f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1784,7 +1788,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 6e897dd9bb160b540b9a44e79730d4c4, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
