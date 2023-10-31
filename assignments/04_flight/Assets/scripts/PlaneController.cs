@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlaneController : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class PlaneController : MonoBehaviour
     public GameObject cameraObject;
 
     public GameObject particles;
+
+    public GameObject myPlane;
+
+    public TMP_Text fuelText;
 
     // Start is called before the first frame update
     void Start()
@@ -50,9 +55,10 @@ public class PlaneController : MonoBehaviour
         transform.Rotate(xRotation, yRotation, -zRotation, Space.Self);
 
         // BOOST
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && fuel > 0)
         {
             forwardSpeed += 20;
+            fuel--;
         }
 
         // GRAVITY
@@ -84,7 +90,7 @@ public class PlaneController : MonoBehaviour
         cameraObject.transform.LookAt(transform);
         oldCamPos = newCamPos;
 
-
+        fuelText.text = fuel.ToString();
             
     }
 
@@ -96,9 +102,8 @@ public class PlaneController : MonoBehaviour
             Debug.Log("ring get!");
             particles.SetActive(true);
             Vector3 pos = transform.position;
-            //Instantiate(particles, pos, Quaternion.identity);
-
-
+            Instantiate(particles, pos, Quaternion.identity, myPlane.transform);
+            fuel = fuel + 1;
         }
     }
 
