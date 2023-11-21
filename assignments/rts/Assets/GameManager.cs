@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static event Action<UnitScript> UnitSelectedHappened;
+    public event Action<UnitScript> UnitSelectedHappened;
 
     public GameObject cubePrefab;
     public GameObject cube2Prefab;
