@@ -11,6 +11,7 @@ public class UnitScript : MonoBehaviour
     public string name;
     public Color selectedColor;
     public Color hoverColor;
+    public Color deadColor;
     Color defaultColor;
 
     bool hover = false;
@@ -28,6 +29,8 @@ public class UnitScript : MonoBehaviour
 
     public GameObject HurtParticles;
     public GameObject HealingParticles;
+
+    public bool isAlive = true;
 
 
     // Start is called before the first frame update
@@ -57,11 +60,15 @@ public class UnitScript : MonoBehaviour
             Vector3 amountToMove = transform.forward * moveSpeed * Time.deltaTime;
             cc.Move(vectorToTarget * moveSpeed * Time.deltaTime);
 
+            Debug.Log(name + " is walking!");
             animator.SetBool("isWalking",true);
+            animator.SetBool("isMining", false);
+            animator.SetBool("isHealing", false);
 
             if (Vector3.Distance(transform.position, target) < 0.5f)
             {
                 hasTarget = false;
+                Debug.Log(name + " is not walking!");
                 animator.SetBool("isWalking", false);
             }
         }
@@ -70,14 +77,19 @@ public class UnitScript : MonoBehaviour
     {
         if (other.CompareTag("Rocks"))
         {
-            Debug.Log("rocks");
+            //Debug.Log("rocks");
             if (health <= 0) //dead
             {
+                isAlive = false;
+                animator.SetBool("dead", true);
                 health = 0;
+                bodyRenderer.material.color = deadColor;
                 //idle
+                animator.SetBool("isMining", false);
             }
             else //alive
             {
+                animator.SetBool("isMining", true);
                 //Debug.Log("else");
                 health = health - (1 * Time.deltaTime);
                 
@@ -102,11 +114,13 @@ public class UnitScript : MonoBehaviour
             Debug.Log(name + " is being healed!");
             if (health >= 100)
             {
+                animator.SetBool("isHealing", false);
                 health = 100;
                 //idle
             }
             else //heal
             {
+                animator.SetBool("isHealing", true);
                 health = health + (1 * Time.deltaTime);
                 Destroy(Instantiate(HealingParticles, transform.position + Vector3.up * 3, Quaternion.identity), .5f);
             }
@@ -115,8 +129,11 @@ public class UnitScript : MonoBehaviour
 
     public void setTarget(Vector3 t)
     {
-        target = t;
-        hasTarget = true;
+        if (isAlive)
+        {
+            target = t;
+            hasTarget = true;
+        }
     }
     private void OnMouseDown()
     {

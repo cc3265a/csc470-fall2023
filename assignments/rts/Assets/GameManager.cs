@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
             u.setUnitColor();
         }
         selectedUnit = unit;
-        Debug.Log(unit.name + " is selected");
+        //Debug.Log(unit.name + " is selected");
 
         UnitSelectedHappened?.Invoke(unit);
     }
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseNumberOfRocks(float Newrocks)
     {
         rocks = rocks + Newrocks;
-        Debug.Log("Newrocks = " + Newrocks + " total rocks = " + rocks);
+        //Debug.Log("Newrocks = " + Newrocks + " total rocks = " + rocks);
         rockText.text = rocks.ToString();
     }
 
