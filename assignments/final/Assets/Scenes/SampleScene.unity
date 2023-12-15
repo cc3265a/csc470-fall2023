@@ -8555,6 +8555,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
+      propertyPath: PersonName
+      value: Lantern Bearer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
       propertyPath: utterances.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -8851,11 +8855,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 36.2
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15.12
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2

@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class LoadInstructions : MonoBehaviour
 {
@@ -16,9 +14,5 @@ public class LoadInstructions : MonoBehaviour
     void Update()
     {
         
-    }
-    public void LoadGame()
-    {
-        SceneManager.LoadScene("InstructionsandComments");
     }
 }

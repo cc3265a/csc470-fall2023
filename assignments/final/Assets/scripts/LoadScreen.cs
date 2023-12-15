@@ -26,5 +26,9 @@ public class LoadScreen : MonoBehaviour
     {
         SceneManager.LoadScene("Instructions and Comments");
     }
+    public void loadMenu()
+    {
+        SceneManager.LoadScene("ifIScreamWillAnyoneHear");
+    }
 
 }

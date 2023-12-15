@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour
             {
                 //Debug.Log("Didn't hit anything with raycast");
                 gm.dialoguePanel.SetActive(false);
+                GameManager.SharedInstance.nextUtterance = 0;
             }
         if (!isEnd)
         {
