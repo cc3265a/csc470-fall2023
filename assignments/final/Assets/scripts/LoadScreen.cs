@@ -30,5 +30,9 @@ public class LoadScreen : MonoBehaviour
     {
         SceneManager.LoadScene("ifIScreamWillAnyoneHear");
     }
+    public void LoadNotes()
+    {
+        SceneManager.LoadScene("Notes");
+    }
 
 }
