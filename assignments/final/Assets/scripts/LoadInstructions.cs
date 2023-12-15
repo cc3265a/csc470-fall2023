@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class LoadScreen : MonoBehaviour
+public class LoadInstructions : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,14 +17,8 @@ public class LoadScreen : MonoBehaviour
     {
         
     }
-
     public void LoadGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("InstructionsandComments");
     }
-    public void LoadInstructions()
-    {
-        SceneManager.LoadScene("Instructions and Comments");
-    }
-
 }

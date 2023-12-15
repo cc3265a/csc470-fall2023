@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ifIScreamWillAnyoneHear.unity
     guid: a5a95c2794278b94a920129502e53b5f
+  - enabled: 1
+    path: Assets/Scenes/Instructions and Comments.unity
+    guid: 9f0294de90e3bf94a8c18422771772e7
+  - enabled: 1
+    path: Assets/Scenes/Notes.unity
+    guid: ef5f86c75482644458fbe3b8ffd975c0
   m_configObjects: {}
