@@ -44,10 +44,10 @@ public class GameManager : MonoBehaviour
     public void LaunchDialogue(VillagerScript person)
     {        
         dialoguePanel.SetActive(true);
-        Debug.Log(dialoguePanel);
+        //Debug.Log(dialoguePanel);
         nameText.text = person.PersonName;
         dialogueText.text = person.utterances[nextUtterance];
-        Debug.Log(person.utterances[0]);
+        //Debug.Log(person.utterances[0]);
         if (nextUtterance + 1 >= person.utterances.Length)
         {
             nextUtterance = 0;

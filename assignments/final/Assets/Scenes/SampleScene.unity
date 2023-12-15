@@ -8004,8 +8004,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 292, y: 80.3621}
+  m_AnchoredPosition: {x: 14.0528, y: 0}
+  m_SizeDelta: {x: 319.1654, y: 80.3621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181788241
 MonoBehaviour:
@@ -8371,7 +8371,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
       propertyPath: PersonName
-      value: Peterson
+      value: Peter
       objectReference: {fileID: 0}
     - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
       propertyPath: utterances.Array.size
@@ -8859,7 +8859,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 8192
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -8887,7 +8887,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 7.050415, y: 0, z: -1.44487, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9220,7 +9220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
       propertyPath: PersonName
-      value: Richard
+      value: Rick
       objectReference: {fileID: 0}
     - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
       propertyPath: utterances.Array.size
@@ -9563,8 +9563,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575910739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.03622817, y: -0.68274224, z: 0.03415602, w: 0.7289609}
-  m_LocalPosition: {x: -142.12946, y: -4.1245513, z: 7.3149047}
+  m_LocalRotation: {x: 0, y: -0.8023125, z: 0, w: 0.5969043}
+  m_LocalPosition: {x: 2.28, y: -3.48, z: 7.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9572,7 +9572,7 @@ Transform:
   - {fileID: 963194228}
   - {fileID: 2037634827}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -130.74, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -106.703, z: 0}
 --- !u!143 &1575910742
 CharacterController:
   m_ObjectHideFlags: 0
@@ -9660,8 +9660,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 292, y: 80.3621}
+  m_AnchoredPosition: {x: 14.0528, y: 0}
+  m_SizeDelta: {x: 319.1654, y: 80.3621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1641766258
 MonoBehaviour:
@@ -10180,8 +10180,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 127, y: 0}
-  m_SizeDelta: {x: 211.2682, y: 55.5324}
+  m_AnchoredPosition: {x: 159.58, y: -1.2075}
+  m_SizeDelta: {x: 319.17, y: 77.947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754786303
 MonoBehaviour:
@@ -10233,12 +10233,12 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 8192
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10266,7 +10266,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -73.160736, w: -17.20034}
+  m_margin: {x: 15.692329, y: 0, z: 8.599335, w: 22.830143}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10643,6 +10643,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
+      propertyPath: PersonName
+      value: Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
       propertyPath: utterances.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -10912,6 +10916,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
+      propertyPath: PersonName
+      value: ???
+      objectReference: {fileID: 0}
     - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
       propertyPath: utterances.Array.size
       value: 3
@@ -11461,6 +11469,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
+      propertyPath: PersonName
+      value: Sarah
+      objectReference: {fileID: 0}
     - target: {fileID: 1082925205697362339, guid: 7cfcd917950ea0a4da84e9808d430cf0, type: 3}
       propertyPath: utterances.Array.size
       value: 4
